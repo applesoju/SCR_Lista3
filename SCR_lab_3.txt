@@ -12,7 +12,8 @@ Parametry:   -f : wyświetla informacje o procesach w pełnym formacie - dodatko
 
 	Po wymuszeniu zamknięcia procesu b.sh, proces a.sh pozostał niezmieniony, jednak proces c.sh zmienił swoje PPID (identyfikator rodzica) na 824, co oznacza że został zaadoptowany przez proces o tym identyfikatorze. Po sprawdzeniu tego procesu poleceniem "ps -p 824" dowiadujemy się że jest to proces "systemd", czyli menadżer systemu i usług, a nie proces "init".
 
-3)	Proces loop.sh : PID=2934, PPID=1721
+3)	./loop.sh | cat | cat
+	Proces loop.sh : PID=2934, PPID=1721
 	Proces cat     : PID=2935, PPID=1721
 	Proces cat     : PID=2936, PPID=1721
 	Wszystkie trzy procesy mają ten sam identyfikator rodzica, jest to program "bash"
